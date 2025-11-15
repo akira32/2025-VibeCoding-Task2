@@ -309,19 +309,47 @@
         display: flex;
         flex-direction: column;
         gap: 1.75rem;
+        align-items: flex-start;
       }
 
       .about-text {
         flex: 2;
       }
 
-      .about-media {
-        flex: 1;
-        max-width: 18rem;
+      .about-lead {
+        color: var(--color-text-muted);
+        margin: 0 0 0.75rem;
+        max-width: 40rem;
       }
 
-      .about-content {
+      .about-paragraph {
         color: var(--color-text-muted);
+        margin: 0 0 0.75rem;
+        max-width: 40rem;
+      }
+
+      .about-list {
+        margin: 0.75rem 0 0;
+        padding-left: 1.1rem;
+        color: var(--color-text-muted);
+        font-size: 0.95rem;
+        max-width: 40rem;
+      }
+
+      .about-list li {
+        margin-bottom: 0.35rem;
+      }
+
+      .about-actions {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .about-media {
+        flex: 1;
+        max-width: 20rem;
       }
       /* CSS:ABOUT-END */
 
@@ -453,7 +481,8 @@
 
         .about-inner {
           flex-direction: row;
-          align-items: flex-start;
+          align-items: center;
+          gap: 2.5rem;
         }
 
         .skills-grid {
@@ -552,29 +581,36 @@
         >
           <div class="container about-inner">
             <div class="about-text">
-              <h2 id="about-heading" class="section-title">
-                關於我（之後會用 Section SDD 替換）
-              </h2>
-              <p class="section-description">
-                這裡目前是 About 區的占位內容，未來會放入更完整的自我介紹、職涯背景與專業領域說明，讓造訪者可以快速了解這位前端工程師的故事與價值。
+              <h2 id="about-heading" class="section-title">關於我</h2>
+              <p class="about-lead">
+                我目前主要專注在前端工程開發，平常會協助專案規劃、教學與技術顧問，也會接一些 Web
+                相關的客製化需求，習慣用穩定好維護的方式來打造前端架構與開發流程。
               </p>
-              <p class="section-description">
-                你可以先想像這裡會出現「個人簡介」、「開發經驗」或「側寫式敘事」等段落，實際內容會依照之後的 Section
-                SDD Prompt 產生。
+              <p class="about-paragraph">
+                過去累積了多種專案經驗，包含企業內部系統與一般網站。做事風格偏重視溝通、喜歡把複雜的東西講清楚，會先跟你確認需求與使用情境，再一起找到兼顧體驗與實作成本的解法。
               </p>
+              <ul class="about-list">
+                <li>可以協助規劃前端架構、元件切分與設計系統，讓專案後續好維護、好擴充。</li>
+                <li>擅長把需求轉成清楚的待辦與畫面流程，幫你對齊 PM、設計與後端的共同認知。</li>
+                <li>能協助 code review、最佳化前端效能，或陪你一起把技術細節整理成可教學、可交接的文件。</li>
+              </ul>
+              <div class="about-actions">
+                <a class="btn btn-primary" href="#projects">查看作品集</a>
+                <a class="btn btn-outline" href="#contact">聯絡我</a>
+              </div>
               <p class="section-description">
-                之後會用 Section SDD 的 Prompt 產生新的 section，請把新的
-                section 程式碼整段貼在
+                若之後想重新產生這一區的內容，可以再用 Section SDD 的 Prompt 生成新的
+                About section，並將新的 section 程式碼整段貼在
                 <!-- SECTION:ABOUT-START -->
                 與
                 <!-- SECTION:ABOUT-END -->
-                這兩個註解中間，完全取代現在這一區。
+                兩個註解中間，完整取代目前這一區。
               </p>
             </div>
             <div class="about-media">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
-                alt="在會議桌前討論設計與程式開發的團隊成員"
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+                alt="專注在電腦螢幕前撰寫程式碼的軟體工程師示意照片"
                 loading="lazy"
               >
             </div>
@@ -716,7 +752,7 @@
                 <div class="contact-item-label">GitHub（占位）</div>
                 <a
                   class="contact-link"
-                  href="https://github.com/yourname"
+                  href="https://github.com/akira32"
                   >https://github.com/yourname</a
                 >
               </div>
